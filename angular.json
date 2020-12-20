@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "crococoder"
+  "defaultProject": "crococoder",
+  "cli": {
+    "analytics": "5339b138-7bdd-4518-858c-0daaf279e924"
+  }
 }
