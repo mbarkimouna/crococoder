@@ -15,6 +15,7 @@ import { DifferentItemsComponent } from './components/different-items/different-
 import { DateMatchsComponent } from './components/date-matchs/date-matchs.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactComponent } from './components/contact/contact.component';
     DifferentItemsComponent,
     DateMatchsComponent,
     VideosComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
