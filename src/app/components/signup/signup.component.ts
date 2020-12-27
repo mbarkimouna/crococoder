@@ -21,8 +21,8 @@ export class SignupComponent implements OnInit {
       confirmPwd:['']
     })
   }
-  signup(){
-    alert('btn click')
+  signup(x:any){
+    console.log("here my object",x)
   }
 
 }
