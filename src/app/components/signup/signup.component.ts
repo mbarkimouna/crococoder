@@ -22,6 +22,10 @@ export class SignupComponent implements OnInit {
     })
   }
   signup(x:any){
+    let users = JSON.parse(localStorage.getItem('users')||'[]');
+    users.push(x);
+    localStorage.setItem('users',JSON.stringify(users));
+    //localStrorage.removeItem('users');
     console.log("here my object",x)
   }
 

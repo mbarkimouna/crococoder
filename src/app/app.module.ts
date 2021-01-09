@@ -17,6 +17,10 @@ import { VideosComponent } from './components/videos/videos.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AllMatchesComponent } from './components/all-matches/all-matches.component';
+import { MatchComponent } from './components/match/match.component';
+import { AddMatchComponent } from './components/add-match/add-match.component';
+import { AdminComponent } from './components//admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DateMatchsComponent,
     VideosComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    AllMatchesComponent,
+    MatchComponent,
+    AddMatchComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
