@@ -21,6 +21,10 @@ import { AllMatchesComponent } from './components/all-matches/all-matches.compon
 import { MatchComponent } from './components/match/match.component';
 import { AddMatchComponent } from './components/add-match/add-match.component';
 import { AdminComponent } from './components//admin/admin.component';
+import { DataService } from './services/data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +51,8 @@ import { AdminComponent } from './components//admin/admin.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(DataService),
     AppRoutingModule
   ],
   providers: [],
