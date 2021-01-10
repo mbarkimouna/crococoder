@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {InMemoryDbService} from 'angular-in-memory-web-api';
+import { DifferentItemsComponent } from '../components/different-items/different-items.component';
 
 @Injectable({
   providedIn: 'root'
@@ -17,13 +18,26 @@ export class DataService implements InMemoryDbService{
       logoTwo:"assets/images/logo_2.png"
     },
     {
-      id: 1, teamOne:"AB", teamTwo:"CD",
+      id: 2, teamOne:"AB", teamTwo:"CD",
       scoreOne: "5", scoreTwo:"2",
       logoOne:"assets/images/logo_1.png",
       logoTwo:"assets/images/logo_2.png"
     }
    ];
-   return {matches};
+   let  players= [
+    {
+     id:1,Name:"mark",numberPlayer:2,poste:'Diffense',team:'ACK'
+    },
+    {
+      id:2,Name:"aaa",numberPlayer:3,poste:'vvvvv',team:'bbb'
+     
+    },
+    {
+      id:3,Name:"fff",numberPlayer:4,poste:'ddddd',team:'ccccc'
+     
+    }
+   ];
+   return {matches,players};
 
   }
 }

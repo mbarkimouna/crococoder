@@ -28,15 +28,17 @@
                     <th>Team</th>
                     <th>Actions</th>
                 </tr>
-                <tr>
-                    <td>Messi</td>
-                    <td>10</td>
-                    <td>ATK</td>
-                    <td>FCB</td>
+               
+                <tr *ngFor='let m of players' >
+                   
+                    <td>{{m.Name}}</td>
+                    <td>{{m.numberPlayer}}</td>
+                    <td>{{m.poste}}</td>
+                    <td>{{m.team}}</td>
                     <td>
                         <button class="btn btn-success">Display</button>
                         <button class="btn btn-warning">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-danger"(click)='deletePlayerComponent(m.id)'>Delete</button>
                     </td>
                 </tr>
             </table>
@@ -50,15 +52,15 @@
                     <th>Score 2</th>
                     <th>Actions</th>
                 </tr>
-                <tr>
-                    <td>FCB</td>
-                    <td>ATB</td>
-                    <td>3</td>
-                    <td>2</td>
+                <tr *ngFor='let p of matches'>
+                    <td>{{p.teamOne}}</td>
+                    <td>{{p.teamTwo}}</td>
+                    <td>{{p.scoreOne}}</td>
+                    <td>{{p.scoreTwo}}</td>
                     <td>
-                        <button class="btn btn-success">Display</button>
-                        <button class="btn btn-warning">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-success" (click)='goToMatch(p.id)'>Display</button>
+                        <button class="btn btn-warning" (click)="goToEditMatch(p.id)">Edit</button>
+                        <button class="btn btn-danger" (click)='deleteMatchComponent(p.id)'>Delete</button>
                     </td>
                 </tr>
             </table>

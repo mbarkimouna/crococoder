@@ -24,6 +24,9 @@ import { AdminComponent } from './components//admin/admin.component';
 import { DataService } from './services/data.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { AddPlayerComponent } from './components/add-player/add-player.component';
+import { DisplayMatchComponent } from './components/display-match/display-match.component';
+import { EditMatchComponent } from './edit-match/edit-match.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { HttpClientModule } from '@angular/common/http';
     AllMatchesComponent,
     MatchComponent,
     AddMatchComponent,
-    AdminComponent
+    AdminComponent,
+    AddPlayerComponent,
+    DisplayMatchComponent,
+    EditMatchComponent
   ],
   imports: [
     BrowserModule,

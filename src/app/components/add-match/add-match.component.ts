@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MatchService } from 'src/app/services/match.service';
 
 @Component({
   selector: 'app-add-match',
@@ -9,7 +11,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class AddMatchComponent implements OnInit {
   match:any={};
   addMatchForm!:FormGroup;
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,
+              private router:Router,
+              private matchService:MatchService) { }
 
   ngOnInit() {
      this.addMatchForm=this.formBuilder.group({
@@ -20,8 +24,13 @@ export class AddMatchComponent implements OnInit {
   })
   }
   addMatch(){
-    console.log('here my object', this.match);
+    this.matchService.addMatch(this.match).subscribe(
+    () =>{
+      this.router.navigate(['admin'])
+    } )
+  }
+    
     
   }
 
-}
+
