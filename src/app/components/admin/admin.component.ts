@@ -11,8 +11,8 @@ export class AdminComponent implements OnInit {
   matches: any;
   players: any;
   constructor(private matchService: MatchService,
-    private router: Router,
-    private playerService: PlayerssService) { }
+              private router: Router,
+              private playerService: PlayerssService) { }
 
   ngOnInit() {
     this.getMatches();
@@ -50,10 +50,15 @@ export class AdminComponent implements OnInit {
     this.router.navigate([`displayMatch/${id}`])
   }
 
-
-
   goToEditMatch(id: any) {
     this.router.navigate([`editMatch/${id}`])
   }
+  goToEditPlayer(id: any) {
+    this.router.navigate([`editPlayer/${id}`])
+  }
+  goToPlayer1(id: any) {
+    this.router.navigate([`displayPlayer/${id}`])
+  }
 
 }
+

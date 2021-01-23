@@ -12,8 +12,8 @@ export class AddPlayerComponent implements OnInit {
   player: any = {};
   addPlayerForm!: FormGroup;
   constructor(private formBuilder: FormBuilder,
-    private router: Router,
-    private playerService: PlayerssService) { }
+              private router: Router,
+              private playerService: PlayerssService) { }
 
   ngOnInit() {
     this.addPlayerForm = this.formBuilder.group({

@@ -2,17 +2,11 @@
     <div class="col-lg-12">
       
       <div class="d-flex team-vs">
-        <span class="score"><span [ngStyle]="{
-         'color':compare(m.scoreOne,m.scoreTwo)}">{{m.scoreOne}}</span>-<span [ngStyle]="{
-          'color':compare(m.scoreTwo,m.scoreOne)}">{{m.scoreTwo}}</span></span>
+        <span>{{p.Name}} </span>
         <div class="team-1 w-50">
           <div class="team-details w-100 text-center">
             <img [src]="m.logoOne" alt="Image" class="img-fluid">
-            <h3>{{m.teamOne}} <span [ngClass]="{
-              winner:result(m.scoreOne,m.scoreTwo)==='win',
-              loser:result(m.scoreOne,m.scoreTwo)==='loss',
-              drawer:result(m.scoreOne,m.scoreTwo)==='draw'
-            }">({{result(m.scoreOne,m.scoreTwo)}})</span></h3>
+            <h3>{{m.numberPlayer}} <span>({{result(m.scoreOne,m.scoreTwo)}})</span></h3>
           </div>
         </div>
         <div class="team-2 w-50">

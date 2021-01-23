@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MustMatch } from 'src/app/validators/mustMatch';
 
 @Component({
   selector: 'app-signup',
@@ -19,7 +20,12 @@ export class SignupComponent implements OnInit {
       email:['',[Validators.email,Validators.required]],
       password:['',[Validators.minLength(8),Validators.required]],
       confirmPwd:['']
-    })
+    },
+    {
+     validator:MustMatch('password','confirmPwd')
+    }
+    
+    )
   }
   signup(x:any){
     let users = JSON.parse(localStorage.getItem('users')||'[]');

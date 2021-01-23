@@ -36,8 +36,8 @@
                     <td>{{m.poste}}</td>
                     <td>{{m.team}}</td>
                     <td>
-                        <button class="btn btn-success">Display</button>
-                        <button class="btn btn-warning">Edit</button>
+                        <button class="btn btn-success" (click)='goToPlayer1(m.id)'>Display</button>
+                        <button class="btn btn-warning"(click)="goToEditPlayer(m.id)">Edit</button>
                         <button class="btn btn-danger"(click)='deletePlayerComponent(m.id)'>Delete</button>
                     </td>
                 </tr>

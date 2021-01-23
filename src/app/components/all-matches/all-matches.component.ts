@@ -18,7 +18,8 @@ export class AllMatchesComponent implements OnInit {
       }
 
     );
-    
-
+}
+updateMatches(x:any){
+  this.matches = x;
 }
 }

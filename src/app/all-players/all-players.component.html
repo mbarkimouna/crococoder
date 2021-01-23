@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-9 mx-auto text-center">
-                <h1 class="text-white">All matches</h1>
+                <h1 class="text-white">All players</h1>
             </div>
         </div>
     </div>
 </div>
-<div class="container" *ngFor="let match of matches" style="margin-bottom:150px">
-    <app-match [m]="match"(newMatches)='updateMatches($event)'></app-match>
+<div class="container" *ngFor="let player of players" style="margin-bottom:150px">
+    <app-player [p]="player"></app-player>
 </div>

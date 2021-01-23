@@ -14,9 +14,9 @@ export class EditMatchComponent implements OnInit {
   id: any;
   addMatchForm!: FormGroup;
   constructor(private formBuilder: FormBuilder,
-    private router: Router,
-    private matchService: MatchService,
-    private activatedRoute: ActivatedRoute) { }
+              private router: Router,
+              private matchService: MatchService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');

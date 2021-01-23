@@ -1,0 +1,43 @@
+<p>add-player works!</p>
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">Edit Player</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div >
+          <form #addPlayerForm="ngForm" (ngSubmit)="editPlayer()">
+  
+            <div class="form-group">
+              <input type="text" class="form-control" 
+              [(ngModel)]="player.Name" [ngModelOptions]="{standalone:true}" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" 
+              [(ngModel)]="player.numberPlayer" [ngModelOptions]="{standalone:true}"placeholder="player Number">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" 
+                [(ngModel)]="player.poste" [ngModelOptions]="{standalone:true}"placeholder="Poste">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" 
+                [(ngModel)]="player.team" [ngModelOptions]="{standalone:true}"placeholder="Team">
+              </div>
+  
+            <div class="form-group">
+              <button class="btn btn-primary py-3 px-5">Edit Player</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

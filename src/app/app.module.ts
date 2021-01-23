@@ -27,6 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddPlayerComponent } from './components/add-player/add-player.component';
 import { DisplayMatchComponent } from './components/display-match/display-match.component';
 import { EditMatchComponent } from './edit-match/edit-match.component';
+import { EditAddComponent } from './components/edit-add/edit-add.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
+import { DisplayPlayerComponent } from './display-player/display-player.component';
+import { PlayerComponent } from './player/player.component';
+import { AllPlayersComponent } from './all-players/all-players.component';
 
 
 @NgModule({
@@ -51,7 +56,12 @@ import { EditMatchComponent } from './edit-match/edit-match.component';
     AdminComponent,
     AddPlayerComponent,
     DisplayMatchComponent,
-    EditMatchComponent
+    EditMatchComponent,
+    EditAddComponent,
+    EditPlayerComponent,
+    DisplayPlayerComponent,
+    PlayerComponent,
+    AllPlayersComponent
   ],
   imports: [
     BrowserModule,
